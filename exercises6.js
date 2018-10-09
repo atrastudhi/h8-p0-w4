@@ -24,10 +24,18 @@ function hitungHuruf(kata) {
           scoreKata += newObject[key]
         }
       }
-      // console.log(newObject)
       object[arr[j]] = scoreKata
     }
-  return object
+  let word
+  let scoreWord = 0
+
+  for (let x in object) {
+    if(object[x] > scoreWord) {
+      word = x
+      scoreWord = object[x]
+    }
+  }
+  return word
 }
   
   // TEST CASES
