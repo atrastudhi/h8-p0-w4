@@ -1,16 +1,14 @@
 
 function tukarBesarKecil(kalimat) {
-    var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 -!'
-    var lowercase = 'abcdefghijklmnopqrstuvwxyz0123456789 -!'
-    var result = ''
-
-    for(var i = 0; i < kalimat.length; i++) {
-        if(uppercase.indexOf(kalimat[i]) === -1) {
-            result += uppercase[lowercase.indexOf(kalimat[i])]
-        } else if(uppercase.indexOf(kalimat[i]) !== -1) {
-            result += lowercase[uppercase.indexOf(kalimat[i])]
-        } 
-    } return result
+    result = ''
+    for(let i = 0; i < kalimat.length; i++) {
+      if(kalimat[i] === kalimat[i].toUpperCase()) {
+        result += kalimat[i].toLowerCase()
+      } else if(kalimat[i] ===  kalimat[i].toLowerCase()) {
+        result += kalimat[i].toUpperCase()
+      }
+    }
+    return result
   }
   
   // TEST CASES
